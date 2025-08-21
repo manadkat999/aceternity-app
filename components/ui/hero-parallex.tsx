@@ -111,14 +111,14 @@ export const Header = () => {
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
-      <div className="w-full mt-10">
+      <div className="w-full mt-10 flex flex-col gap-2">
         <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
           Hi, We are <br /> <span className="text-[#e60cc1]">
                     One Step Stronger
                   </span>
                   
         </h1>
-        <br />
+       
         <p className={` mt-2 text-2xl md:text-4xl font-bold text-white-100`}>
           <span>Helping you feel</span>
           <TypeAnimation
