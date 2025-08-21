@@ -105,32 +105,41 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <div className="flex flex-col justify-center items-center mt-5">
-        <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-        <div className="w-1 sm:h-80 h-40 violet-gradient" />
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+      <div className={`w-full flex gap-5 z-10 items-center xl:items-center md:items-start max-w-7xl mx-auto`}>
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        </div>
+      <div className="w-full mt-10">
+        <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+          Hi, We are <br /> <span className="text-[#e60cc1]">
+                    One Step Stronger
+                  </span>
+                  
+        </h1>
+        <br />
+        <p className={` mt-2 text-2xl md:text-4xl font-bold text-white-100`}>
+          <span>Helping you feel</span>
+          <TypeAnimation
+            cursor={false} // omit the default css typing animation class, otherwise we won't be able to manipulate it manually
+            className={"text-[#915eff] text-2xl md:text-4xl font-bold"} // pass custom cursor className that will be manipulated (defaults below)
+            sequence={[
+                        ' More Confident ',
+                        500,
+                        ' Healthier ',
+                        500,
+                        ' At Home in the gym ',
+                        500,
+                        ' ',
+                        100,
+                        
+                      ]}
+            repeat={Infinity}
+          />
+        </p>
       </div>
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-         Hi, We are <br /> <span className="text-[#e60cc1]">
-                  One Step Stronger
-                </span>
-      </h1>
-      <TypeAnimation
-        cursor={false} // omit the default css typing animation class, otherwise we won't be able to manipulate it manually
-        className={"text-[#915eff]"} // pass custom cursor className that will be manipulated (defaults below)
-        sequence={[
-                    ' More Confident ',
-                    500,
-                    ' Healthier ',
-                    500,
-                    ' At Home in the gym ',
-                    500,
-                    ' ',
-                    100,
-                    
-                  ]}
-        repeat={Infinity}
-                />
+    </div>
     </div>
   );
 };
