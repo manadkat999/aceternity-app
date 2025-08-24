@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fitness Equipment
+* source:	https://sketchfab.com/3d-models/fitness-equipment-b7bfb774ac3646fb9c37697b4e074945
+* author:	IPmovie (https://sketchfab.com/IPmovie)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fitness Equipment" (https://sketchfab.com/3d-models/fitness-equipment-b7bfb774ac3646fb9c37697b4e074945) by IPmovie (https://sketchfab.com/IPmovie) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

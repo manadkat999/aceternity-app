@@ -1,102 +1,53 @@
 "use client";
 import React from "react";
-import { HeroParallax } from "@/components/ui/hero-parallex";
+import { TypeAnimation } from "react-type-animation";
+import ComputersCanvas from "@/components/canvas/Computers";
 
-export function HeroParallaxDemo() {
-  return <HeroParallax products={products} />;
-}
-export const products = [
-  {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
-  },
-  {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
+export const Hero = () => {
+  const ref = React.useRef(null);
+  return (
+    <section
+      ref={ref}
+      className="h-[100vh] overflow-hidden antialiased relative self-auto [perspective:1000px] [transform-style:preserve-3d]"
+    >
+      <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+        <div
+          className={`w-full flex gap-5 z-10 items-center xl:items-center md:items-start max-w-7xl mx-auto`}
+        >
+          <div className="flex flex-col justify-center items-center mt-5">
+            <div className="w-5 h-5 rounded-full bg-[#e60cc1]" />
+            <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          </div>
+          <div className="w-full mt-10 flex flex-col gap-2">
+            <h1 className="text-7xl font-bold text-gray-500">
+              Hi, We are <br />{" "}
+              <span className="text-[#e60cc1]">One Step Stronger</span>
+            </h1>
 
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
+            <p className={`text-gray-500 mt-2 text-4xl font-bold`}>
+              <span>Helping you feel</span>
+              <TypeAnimation
+                cursor={false} // omit the default css typing animation class, otherwise we won't be able to manipulate it manually
+                className={"text-[#e60cc1] text-4xl font-bold"} // pass custom cursor className that will be manipulated (defaults below)
+                sequence={[
+                  " More Confident ",
+                  500,
+                  " Healthier ",
+                  500,
+                  " At Home in the gym ",
+                  500,
+                  " ",
+                  100,
+                ]}
+                repeat={Infinity}
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+      <ComputersCanvas />
+    </section>
+  );
+};
 
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
-];
+export default Hero;
